@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class MergeSort {
+public class MergeSortRecursive {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -23,12 +23,12 @@ public class MergeSort {
 		System.out.println("Y");
 		System.out.println("start "+start+" mid "+mid+" end "+end);
 
-		mergeSort(input,mid,end);
+		mergeSort(input,mid,end);//1,2,3
 		System.out.println("Z");
 		System.out.println("start "+start+" mid "+mid+" end "+end);
 		System.out.println(Arrays.toString(input));
 
-		merge(input, start, mid, end);
+		merge(input, start, mid, end);//1,2,3
 		System.out.println(Arrays.toString(input));
 		
 		
@@ -45,6 +45,7 @@ public class MergeSort {
 		int tempIndex = 0;  //this is going to keep the track where we are in temporary array when we're doing copy
 		
 		int[] temp =new int[end-start]; 
+		System.out.println(Arrays.toString(temp));
 		
 		// i<mid means traversing over left partition array is completed and j<end means traversing over right partition array is completed
 		while(i<mid && j<end) {
@@ -53,9 +54,11 @@ public class MergeSort {
 			//and tempIndex will be incremented and after adding an element to temp array, array position gets increment(from where element is copied to temporary array) 
 			temp[tempIndex++] = input[i]<=input[j] ? input[i++] : input[j++];
 		}
+		System.out.println(Arrays.toString(temp));
 		//tempIndex tells us how many elements we handled
 		//mid-i tells us the number of elements copy over into the temporary array
 		System.arraycopy(input, i, input, start+tempIndex, mid-i);
+		System.out.println(Arrays.toString(input));
 		System.arraycopy(temp,0, input, start, tempIndex);
 	}
 
