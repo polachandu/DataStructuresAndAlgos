@@ -19,9 +19,10 @@ public class SelectionSort {
 			if(i!=lowest) {
 				swap(intArray,i,lowest);
 			}
-			System.out.println("Selection sorted array: "+Arrays.toString(intArray));
 
 		}
+		System.out.println("Selection sorted array: "+Arrays.toString(intArray));
+
 	}
 
 }
