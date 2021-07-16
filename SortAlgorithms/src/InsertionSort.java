@@ -4,7 +4,7 @@ public class InsertionSort {
 	
 	public static void main(String[] args) {
 		
-		int[]intArray = {5,3,4,1,2};
+		int[]intArray = {15, 5, 4, 18, 12, 19, 14, 10, 8, 20};
 	
 	for(int firstUnsortedIndex=1;firstUnsortedIndex<intArray.length;firstUnsortedIndex++) { //we assume that first index is sorted
 		var newElement = intArray[firstUnsortedIndex];
@@ -13,8 +13,9 @@ public class InsertionSort {
 			intArray[j]=intArray[j-1];
 		}
 		intArray[j]=newElement;
+		System.out.println("Insertion sorted array: "+Arrays.toString(intArray));
 	}
-	System.out.println("Insertion sorted array: "+Arrays.toString(intArray));
+	
 	
 	
 	}

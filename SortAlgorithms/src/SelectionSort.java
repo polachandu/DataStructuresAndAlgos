@@ -8,7 +8,7 @@ public class SelectionSort {
  }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] intArray = {19,44,38,5,47,15};
+		int[] intArray = {11, 7, 12, 14, 19, 1, 6, 18, 8, 20};
 		for(int i= 0;i<intArray.length;i++) {
 			int lowest = i;
 			for(int j=i+1;j<intArray.length;j++) {
@@ -19,10 +19,10 @@ public class SelectionSort {
 			if(i!=lowest) {
 				swap(intArray,i,lowest);
 			}
+			System.out.println("Selection sorted array: "+Arrays.toString(intArray));
 
 		}
-		System.out.println("Selection sorted array: "+Arrays.toString(intArray));
-
+		
 	}
 
 }
