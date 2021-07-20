@@ -56,7 +56,7 @@ public class SinglyLinkedLists {
 	
   
     /*
-	 * Method to add a node at the end of the list
+	 * Method to add a node at the end of the list : push
 	 */
 	public void addNodeAtTheEnd(int data) {
         System.out.println("Add a node with data " + data + " at the end.");
@@ -79,7 +79,7 @@ public class SinglyLinkedLists {
 	}
 	
 	/*
-	 * Method to add a node at the specified position in the list
+	 * Method to add a node at the specified position in the list: pop
 	 */
 	public void deleteNodeAtTheEnd() {
 		System.out.println("Node deleted at end");
